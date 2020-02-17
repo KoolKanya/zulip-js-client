@@ -4,7 +4,7 @@ function api(baseUrl, config, method, params) {
   let url = baseUrl;
   const auth = Buffer.from(`${config.username}:${config.apiKey}`).toString('base64');
   const authHeader = `Basic ${auth}`;
-  const options = { method, headers: { Authorization: authHeader } };
+  const options = { method, headers: { Authorization: authHeader, IsKkApi: 1 } };
   if (method === 'POST') {
     options.body = new helper.FormData();
     Object.keys(params).forEach((key) => {
