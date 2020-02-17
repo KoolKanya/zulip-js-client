@@ -56,12 +56,12 @@ function zulip(initialConfig) {
     config.apiURL = `${config.realm}/api/v1`;
   }
 
-  if (!config.apiKey) {
-    return accounts(config).retrieve().then((res) => {
-      config.apiKey = res.api_key;
-      return resources(config);
-    });
-  }
+  // if (!config.apiKey) {
+  //   return accounts(config).retrieve().then((res) => {
+  //     config.apiKey = res.api_key;
+  //     return resources(config);
+  //   });
+  // }
   return Promise.resolve(resources(config));
 }
 
