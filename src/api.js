@@ -4,7 +4,7 @@ function api(baseUrl, config, method, params) {
   let url = baseUrl;
   // const auth = Buffer.from(`${config.username}:${config.apiKey}`).toString('base64');
   //TODO: remove call for apiKey.
-  const auth = Buffer.from(`${config.username}: `).toString('base64');
+  const auth = config.auth || Buffer.from(`${config.username}: `).toString('base64');
   const authHeader = `Basic ${auth}`;
   //TODO: need to take care of the host environment-wise.
   const options = { method, headers: { Authorization: authHeader, IsKkApi: 1, REALMHOST: "159.89.171.54:9991" } };

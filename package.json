@@ -1,6 +1,6 @@
 {
   "name": "@kumarmo2/zulip",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Javascript library to access the Zulip API",
   "main": "lib/index.js",
   "directories": {
