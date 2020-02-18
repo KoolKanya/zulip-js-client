@@ -1,6 +1,6 @@
 {
   "name": "@kumarmo2/zulip",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "Javascript library to access the Zulip API",
   "main": "lib/index.js",
   "directories": {
@@ -36,7 +36,6 @@
   "scripts": {
     "build": "babel -d lib/ src/",
     "prepare": "npm run build",
-    "prepublish": "npm run build",
     "lint": "eslint src test examples",
     "test": "npm run lint && npm run build && mocha test/*",
     "call": "node examples/interactive_call_endpoint.js"
