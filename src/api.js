@@ -7,7 +7,7 @@ function api(baseUrl, config, method, params) {
   const auth = Buffer.from(`${config.username}:${config.auth || ""}`).toString('base64');
   const authHeader = `Basic ${auth}`;
   //TODO: need to take care of the host environment-wise.
-  const options = { method, headers: { Authorization: authHeader, IsKkApi: 1, REALMHOST: "159.89.171.54:9991" } };
+  const options = { method, headers: { Authorization: authHeader, IsKkApi: 1, REALMHOST: "https://chat-dev.koolkanya.com" } };
   if (method === 'POST') {
     options.body = new helper.FormData();
     Object.keys(params).forEach((key) => {
