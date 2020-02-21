@@ -1,5 +1,5 @@
 {
-  "name": "@kumarmo2/zulip",
+  "name": "koolkanya-zulip",
   "version": "2.0.16",
   "description": "Javascript library to access the Zulip API",
   "main": "lib/index.js",
