@@ -8,7 +8,7 @@ function api(baseUrl, config, method, params) {
   const authHeader = `Basic ${auth}`;
   //TODO: need to take care of the host environment-wise.
   const options = { method, headers: { Authorization: authHeader, IsKkApi: 1, REALMHOST: config.realm } };
-  if (method === 'POST') {
+  if (method === 'POST'|| method === 'PATCH') {
     options.body = new helper.FormData();
     Object.keys(params).forEach((key) => {
       options.body.append(key, params[key]);
