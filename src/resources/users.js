@@ -10,6 +10,10 @@ function users(config) {
       const url = `${config.apiURL}/users`;
       return api(url, config, 'POST', params);
     },
+    update: function update(userid, params) {
+      var url = "".concat(config.apiURL, "/users/" + userid);
+      return api(url, config, 'PATCH', params);
+    },
     me: {
       pointer: {
         retrieve: (params) => {
