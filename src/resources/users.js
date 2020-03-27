@@ -14,6 +14,10 @@ function users(config) {
       var url = "".concat(config.apiURL, "/users/" + userid);
       return api(url, config, 'PATCH', params);
     },
+    deactivate: function deactivate(userid) {
+      var url = "".concat(config.apiURL, "/users/" + userid);
+      return api(url, config, 'DELETE');
+    },
     me: {
       pointer: {
         retrieve: (params) => {
