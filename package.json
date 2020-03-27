@@ -1,6 +1,6 @@
 {
   "name": "koolkanya-zulip",
-  "version": "2.0.16",
+  "version": "2.0.18",
   "description": "Javascript library to access the Zulip API",
   "main": "lib/index.js",
   "directories": {
